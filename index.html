@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ユーズAI合同会社 - ソフトウェア開発、情報処理サービス、Webサイト制作、経営コンサルティング">
+    <title>ユーズAI合同会社</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        main {
+            background: white;
+            margin: 40px auto;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .business-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .business-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        .business-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            width: 200px;
+            color: #555;
+        }
+
+        .info-table td {
+            color: #333;
+        }
+
+        .info-table tr:last-child th,
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .contact-section p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+        }
+
+        .contact-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            main {
+                padding: 30px 20px;
+                margin: 20px auto;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .info-table {
+                font-size: 0.9em;
+            }
+
+            .info-table th,
+            .info-table td {
+                padding: 10px;
+                display: block;
+                width: 100%;
+            }
+
+            .info-table th {
+                background-color: #667eea;
+                color: white;
+                border-bottom: none;
+                padding-bottom: 5px;
+            }
+
+            .info-table td {
+                padding-top: 5px;
+                padding-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ユーズAI合同会社</h1>
+            <p>Use AI LLC</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>会社概要</h2>
+            <table class="info-table">
+                <tr>
+                    <th>会社名</th>
+                    <td>ユーズAI合同会社</td>
+                </tr>
+                <tr>
+                    <th>代表社員</th>
+                    <td>鈴木 健太</td>
+                </tr>
+                <tr>
+                    <th>本社所在地</th>
+                    <td>東京都練馬区</td>
+                </tr>
+                <tr>
+                    <th>設立</th>
+                    <td>令和7年10月17日</td>
+                </tr>
+                <tr>
+                    <th>資本金</th>
+                    <td>100万円</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="business">
+            <h2>事業内容</h2>
+            <ul class="business-list">
+                <li>ソフトウェアの開発、販売及び保守</li>
+                <li>情報処理サービス業</li>
+                <li>Webサイトの企画、制作、運営及び管理</li>
+                <li>経営コンサルティング業</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>お問い合わせ</h2>
+            <p>ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:info.useai.llc@gmail.com">info.useai.llc@gmail.com</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ユーズAI合同会社. All rights reserved.</p>
+    </footer>
+</body>
+</html>
