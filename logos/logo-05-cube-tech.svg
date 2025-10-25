@@ -1,0 +1,13 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient05" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- 3Dキューブで技術的なイメージ -->
+    <path d="M 50 25 L 70 37 L 70 62 L 50 75 L 30 62 L 30 37 Z" fill="url(#gradient05)" opacity="0.3"/>
+    <path d="M 50 25 L 70 37 L 50 50 L 30 37 Z" fill="url(#gradient05)"/>
+    <path d="M 30 37 L 30 62 L 50 75 L 50 50 Z" fill="url(#gradient05)" opacity="0.7"/>
+    <path d="M 70 37 L 70 62 L 50 75 L 50 50 Z" fill="url(#gradient05)" opacity="0.5"/>
+</svg>

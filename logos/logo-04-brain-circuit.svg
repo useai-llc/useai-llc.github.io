@@ -1,0 +1,18 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient04" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- 脳とAIの回路のイメージ -->
+    <circle cx="50" cy="50" r="35" fill="none" stroke="url(#gradient04)" stroke-width="2" opacity="0.3"/>
+    <circle cx="35" cy="40" r="6" fill="url(#gradient04)"/>
+    <circle cx="65" cy="40" r="6" fill="url(#gradient04)"/>
+    <circle cx="50" cy="60" r="6" fill="url(#gradient04)"/>
+    <circle cx="50" cy="30" r="6" fill="url(#gradient04)"/>
+    <line x1="35" y1="40" x2="50" y2="30" stroke="url(#gradient04)" stroke-width="2"/>
+    <line x1="65" y1="40" x2="50" y2="30" stroke="url(#gradient04)" stroke-width="2"/>
+    <line x1="35" y1="40" x2="50" y2="60" stroke="url(#gradient04)" stroke-width="2"/>
+    <line x1="65" y1="40" x2="50" y2="60" stroke="url(#gradient04)" stroke-width="2"/>
+</svg>
