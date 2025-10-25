@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>ロゴプレビュー - ユーズAI合同会社</title>
+    <title>Use/AI ロゴバリエーション - ユーズAI合同会社</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
             text-align: center;
             color: #2c3e50;
             margin-bottom: 10px;
-            font-size: 2em;
+            font-size: 2.2em;
         }
 
         .subtitle {
@@ -41,9 +41,16 @@
             font-weight: 300;
         }
 
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin: 50px 0 30px;
+            font-size: 1.5em;
+        }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
         }
@@ -65,15 +72,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 200px;
+            min-height: 150px;
             margin-bottom: 20px;
             background: #f8f9fa;
             border-radius: 8px;
+            padding: 20px;
         }
 
         .logo-preview img {
-            width: 120px;
-            height: 120px;
+            max-width: 100%;
+            height: auto;
         }
 
         .logo-title {
@@ -90,19 +98,45 @@
             text-align: center;
             line-height: 1.6;
             font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .logo-usage {
+            font-size: 0.85em;
+            color: #3498db;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .download-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .download-link:hover {
+            background: #2c3e50;
+        }
+
+        .card-actions {
+            text-align: center;
         }
 
         .dark-section {
             background: #1a202c;
             padding: 60px 20px;
-            margin: 60px -20px 0;
+            margin: 60px -20px;
+            border-radius: 0;
         }
 
         .dark-section h2 {
             color: white;
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 1.8em;
         }
 
         .dark-section .logo-card {
@@ -121,260 +155,137 @@
             color: #a0aec0;
         }
 
-        .download-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 16px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9em;
-            transition: background 0.3s;
+        .dark-section .logo-usage {
+            color: #60a5fa;
         }
 
-        .download-link:hover {
-            background: #2c3e50;
+        .usage-table {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
         }
 
-        .card-actions {
-            text-align: center;
+        .usage-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .usage-table th,
+        .usage-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .usage-table th {
+            background: #f8f9fa;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .usage-table td {
+            color: #666;
+        }
+
+        .usage-table tr:last-child td {
+            border-bottom: none;
         }
 
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: 1fr;
             }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>ロゴデザイン案</h1>
-        <p class="subtitle">ユーズAI合同会社 - 20パターンのロゴプレビュー</p>
+        <h1>Use/AI ロゴバリエーション</h1>
+        <p class="subtitle">ユーズAI合同会社 公式ロゴ - 用途別バリエーション</p>
 
-        <h2 style="text-align: center; color: #2c3e50; margin: 40px 0 30px; font-size: 1.5em;">✨ UseAI ロゴバリエーション（新規追加）</h2>
-
+        <h2>📱 基本ロゴ</h2>
         <div class="grid">
             <div class="logo-card">
                 <div class="logo-preview">
-                    <img src="logos/logo-11-useai-simple.svg" alt="ロゴ11" style="width: 200px;">
+                    <img src="logos/useai-logo.svg" alt="Use/AI メインロゴ" style="width: 200px;">
                 </div>
-                <div class="logo-title">11. UseAI シンプル</div>
-                <div class="logo-description">わかりやすく「UseAI」とテキスト表示。グラデーションで洗練された印象。</div>
+                <div class="logo-title">メインロゴ（カラー）</div>
+                <div class="logo-description">基本のロゴデザイン。Webサイトやドキュメントで使用。</div>
+                <div class="logo-usage">💡 推奨用途: Webサイト、資料、メール署名</div>
                 <div class="card-actions">
-                    <a href="logos/logo-11-useai-simple.svg" download class="download-link">ダウンロード</a>
+                    <a href="logos/useai-logo.svg" download class="download-link">ダウンロード</a>
                 </div>
             </div>
 
             <div class="logo-card">
                 <div class="logo-preview">
-                    <img src="logos/logo-12-useai-modern.svg" alt="ロゴ12" style="width: 180px;">
+                    <img src="logos/useai-logo-horizontal-compact.svg" alt="Use/AI コンパクト" style="width: 160px;">
                 </div>
-                <div class="logo-title">12. UseAI モダン（AI強調）</div>
-                <div class="logo-description">「Use」は軽く、「AI」を太字で強調。AIビジネスを明確にアピール。</div>
+                <div class="logo-title">コンパクト版</div>
+                <div class="logo-description">小さいスペースに最適化されたバージョン。</div>
+                <div class="logo-usage">💡 推奨用途: ヘッダー、フッター、アプリバー</div>
                 <div class="card-actions">
-                    <a href="logos/logo-12-useai-modern.svg" download class="download-link">ダウンロード</a>
+                    <a href="logos/useai-logo-horizontal-compact.svg" download class="download-link">ダウンロード</a>
                 </div>
             </div>
 
             <div class="logo-card">
                 <div class="logo-preview">
-                    <img src="logos/logo-13-useai-box.svg" alt="ロゴ13" style="width: 200px;">
+                    <img src="logos/useai-logo-monochrome.svg" alt="Use/AI モノクロ" style="width: 200px;">
                 </div>
-                <div class="logo-title">13. UseAI ボックス</div>
-                <div class="logo-description">背景付きボックスタイプ。SNSアイコンや名刺に最適。視認性抜群。</div>
+                <div class="logo-title">モノクロ版</div>
+                <div class="logo-description">単色印刷や特殊用途向け。</div>
+                <div class="logo-usage">💡 推奨用途: 印刷物、FAX、コピー</div>
                 <div class="card-actions">
-                    <a href="logos/logo-13-useai-box.svg" download class="download-link">ダウンロード</a>
+                    <a href="logos/useai-logo-monochrome.svg" download class="download-link">ダウンロード</a>
+                </div>
+            </div>
+        </div>
+
+        <h2>🎨 背景付きバージョン</h2>
+        <div class="grid">
+            <div class="logo-card">
+                <div class="logo-preview">
+                    <img src="logos/useai-logo-box.svg" alt="Use/AI ボックス" style="width: 220px;">
+                </div>
+                <div class="logo-title">ボックス型</div>
+                <div class="logo-description">グラデーション背景付き。視認性が高く印象的。</div>
+                <div class="logo-usage">💡 推奨用途: プレゼン資料、ポスター、広告</div>
+                <div class="card-actions">
+                    <a href="logos/useai-logo-box.svg" download class="download-link">ダウンロード</a>
                 </div>
             </div>
 
             <div class="logo-card">
                 <div class="logo-preview">
-                    <img src="logos/logo-14-useai-dot.svg" alt="ロゴ14" style="width: 200px;">
+                    <img src="logos/useai-logo-square.svg" alt="Use/AI 正方形" style="width: 150px;">
                 </div>
-                <div class="logo-title">14. UseAI ドット付き</div>
-                <div class="logo-description">左側にアクセントドット。シンプルながら印象的なデザイン。</div>
+                <div class="logo-title">正方形（SNS用）</div>
+                <div class="logo-description">TwitterやFacebookなどのプロフィール画像に最適。</div>
+                <div class="logo-usage">💡 推奨用途: SNSアイコン、アプリアイコン</div>
                 <div class="card-actions">
-                    <a href="logos/logo-14-useai-dot.svg" download class="download-link">ダウンロード</a>
+                    <a href="logos/useai-logo-square.svg" download class="download-link">ダウンロード</a>
                 </div>
             </div>
 
             <div class="logo-card">
                 <div class="logo-preview">
-                    <img src="logos/logo-15-useai-slash.svg" alt="ロゴ15" style="width: 200px;">
+                    <img src="logos/useai-logo-circle.svg" alt="Use/AI 円形" style="width: 150px;">
                 </div>
-                <div class="logo-title">15. Use/AI スラッシュ</div>
-                <div class="logo-description">スラッシュで区切り、「Use」と「AI」の関係性を表現。モダンでスタイリッシュ。</div>
+                <div class="logo-title">円形（SNS用）</div>
+                <div class="logo-description">InstagramやLINEなどの円形アイコンに最適。</div>
+                <div class="logo-usage">💡 推奨用途: Instagram、LINE、プロフィール画像</div>
                 <div class="card-actions">
-                    <a href="logos/logo-15-useai-slash.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-16-useai-underline.svg" alt="ロゴ16" style="width: 200px;">
-                </div>
-                <div class="logo-title">16. UseAI アンダーライン</div>
-                <div class="logo-description">グラデーションのアンダーラインで強調。安定感のあるデザイン。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-16-useai-underline.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-17-useai-bracket.svg" alt="ロゴ17" style="width: 220px;">
-                </div>
-                <div class="logo-title">17. [UseAI] ブラケット</div>
-                <div class="logo-description">プログラミング風のブラケット。テック企業らしさを強調。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-17-useai-bracket.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-18-useai-circuit.svg" alt="ロゴ18" style="width: 240px;">
-                </div>
-                <div class="logo-title">18. UseAI 回路</div>
-                <div class="logo-description">両端に回路要素を配置。AI技術と接続性を表現。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-18-useai-circuit.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-19-useai-minimal.svg" alt="ロゴ19" style="width: 180px;">
-                </div>
-                <div class="logo-title">19. UseAI ミニマル</div>
-                <div class="logo-description">細字でレタースペーシングを広く。洗練された高級感のあるデザイン。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-19-useai-minimal.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-20-useai-stack.svg" alt="ロゴ20" style="width: 120px; height: 150px;">
-                </div>
-                <div class="logo-title">20. UseAI 縦積み</div>
-                <div class="logo-description">縦方向に配置。「AI」を大きく強調し、印象に残るデザイン。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-20-useai-stack.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <h2 style="grid-column: 1 / -1; text-align: center; color: #2c3e50; margin: 40px 0 20px; font-size: 1.5em;">シンボルマーク型ロゴ</h2>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-01-ai-text.svg" alt="ロゴ1">
-                </div>
-                <div class="logo-title">01. AIテキスト（透過）</div>
-                <div class="logo-description">シンプルなAI文字デザイン。背景透過で汎用性が高く、現在のサイトで使用中のデザインです。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-01-ai-text.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-02-ai-text-bg.svg" alt="ロゴ2">
-                </div>
-                <div class="logo-title">02. AIテキスト（背景付き）</div>
-                <div class="logo-description">円形の背景にAI文字を白で配置。SNSアイコンや名刺に最適です。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-02-ai-text-bg.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-03-ai-text-dark.svg" alt="ロゴ3">
-                </div>
-                <div class="logo-title">03. AIテキスト（ダークモード）</div>
-                <div class="logo-description">明るいグラデーションで暗い背景に対応。ダークモードのWebサイトやアプリに最適です。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-03-ai-text-dark.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-04-brain-circuit.svg" alt="ロゴ4">
-                </div>
-                <div class="logo-title">04. ニューラルネットワーク</div>
-                <div class="logo-description">AIの神経回路をイメージした接続ノード。技術的で先進的な印象を与えます。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-04-brain-circuit.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-05-cube-tech.svg" alt="ロゴ5">
-                </div>
-                <div class="logo-title">05. 3Dキューブ</div>
-                <div class="logo-description">立体的なキューブデザイン。テクノロジー企業らしい幾何学的な美しさがあります。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-05-cube-tech.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-06-abstract-wave.svg" alt="ロゴ6">
-                </div>
-                <div class="logo-title">06. アブストラクトウェーブ</div>
-                <div class="logo-description">流れるような波のデザイン。データフローやAIの流動性を表現しています。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-06-abstract-wave.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-07-hexagon.svg" alt="ロゴ7">
-                </div>
-                <div class="logo-title">07. ヘキサゴン + AI</div>
-                <div class="logo-description">六角形フレームにAI文字を配置。モダンで構造的なデザインです。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-07-hexagon.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-08-letter-u.svg" alt="ロゴ8">
-                </div>
-                <div class="logo-title">08. レターU（Use）</div>
-                <div class="logo-description">社名の「Use」からUの文字をモチーフに。シンプルで覚えやすいデザインです。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-08-letter-u.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-09-geometric.svg" alt="ロゴ9">
-                </div>
-                <div class="logo-title">09. ジオメトリック三角形</div>
-                <div class="logo-description">三角形を組み合わせた幾何学デザイン。ダイナミックで力強い印象です。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-09-geometric.svg" download class="download-link">ダウンロード</a>
-                </div>
-            </div>
-
-            <div class="logo-card">
-                <div class="logo-preview">
-                    <img src="logos/logo-10-minimal-circle.svg" alt="ロゴ10">
-                </div>
-                <div class="logo-title">10. ミニマルサークル</div>
-                <div class="logo-description">円と点のみの超ミニマルデザイン。洗練された印象を与えます。</div>
-                <div class="card-actions">
-                    <a href="logos/logo-10-minimal-circle.svg" download class="download-link">ダウンロード</a>
+                    <a href="logos/useai-logo-circle.svg" download class="download-link">ダウンロード</a>
                 </div>
             </div>
         </div>
@@ -382,37 +293,101 @@
 
     <div class="dark-section">
         <div class="container">
-            <h2>ダークモードでのプレビュー</h2>
+            <h2>🌙 ダークモード対応</h2>
             <div class="grid">
                 <div class="logo-card">
                     <div class="logo-preview">
-                        <img src="logos/logo-03-ai-text-dark.svg" alt="ダークモード用">
+                        <img src="logos/useai-logo-white.svg" alt="Use/AI 白" style="width: 200px;">
                     </div>
-                    <div class="logo-title">ダークモード推奨</div>
-                    <div class="logo-description">暗い背景に最適化されたロゴ（03番）</div>
+                    <div class="logo-title">白色版</div>
+                    <div class="logo-description">暗い背景での使用に最適化。すべて白色で統一。</div>
+                    <div class="logo-usage">💡 推奨用途: ダークモードUI、暗い背景の資料</div>
+                    <div class="card-actions">
+                        <a href="logos/useai-logo-white.svg" download class="download-link">ダウンロード</a>
+                    </div>
                 </div>
 
                 <div class="logo-card">
                     <div class="logo-preview">
-                        <img src="logos/logo-02-ai-text-bg.svg" alt="背景付き">
+                        <img src="logos/useai-logo-square.svg" alt="Use/AI 正方形" style="width: 150px;">
                     </div>
-                    <div class="logo-title">背景付きロゴ</div>
-                    <div class="logo-description">どんな背景でも使える（02番）</div>
+                    <div class="logo-title">背景付き正方形</div>
+                    <div class="logo-description">暗い場所でも背景があるため視認性抜群。</div>
+                    <div class="logo-usage">💡 推奨用途: どんな背景でも使える万能型</div>
+                    <div class="card-actions">
+                        <a href="logos/useai-logo-square.svg" download class="download-link">ダウンロード</a>
+                    </div>
                 </div>
 
                 <div class="logo-card">
                     <div class="logo-preview">
-                        <img src="logos/logo-07-hexagon.svg" alt="ヘキサゴン">
+                        <img src="logos/useai-logo-circle.svg" alt="Use/AI 円形" style="width: 150px;">
                     </div>
-                    <div class="logo-title">明るいロゴも対応</div>
-                    <div class="logo-description">一部のロゴは暗い背景でも映えます（07番）</div>
+                    <div class="logo-title">背景付き円形</div>
+                    <div class="logo-description">どんな背景でも映える円形デザイン。</div>
+                    <div class="logo-usage">💡 推奨用途: 汎用的なアイコン利用</div>
+                    <div class="card-actions">
+                        <a href="logos/useai-logo-circle.svg" download class="download-link">ダウンロード</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container" style="margin-top: 60px; text-align: center;">
-        <a href="index.html" style="color: #3498db; text-decoration: none; font-size: 1.1em;">← トップページに戻る</a>
+    <div class="container">
+        <h2>📋 ロゴ使用ガイド</h2>
+        <div class="usage-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>用途</th>
+                        <th>推奨ロゴ</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Webサイトヘッダー</td>
+                        <td>メインロゴ / コンパクト版</td>
+                        <td>背景が白い場合はカラー版を使用</td>
+                    </tr>
+                    <tr>
+                        <td>名刺</td>
+                        <td>メインロゴ / ボックス型</td>
+                        <td>印象を強くしたい場合はボックス型</td>
+                    </tr>
+                    <tr>
+                        <td>SNSプロフィール画像</td>
+                        <td>正方形 / 円形</td>
+                        <td>各SNSの形式に合わせて選択</td>
+                    </tr>
+                    <tr>
+                        <td>プレゼン資料</td>
+                        <td>メインロゴ / ボックス型</td>
+                        <td>背景色に応じて白色版も使用可</td>
+                    </tr>
+                    <tr>
+                        <td>印刷物（モノクロ）</td>
+                        <td>モノクロ版</td>
+                        <td>FAXやコピーでも明瞭に表示</td>
+                    </tr>
+                    <tr>
+                        <td>ダークモードUI</td>
+                        <td>白色版</td>
+                        <td>暗い背景には白色版を使用</td>
+                    </tr>
+                    <tr>
+                        <td>メール署名</td>
+                        <td>コンパクト版</td>
+                        <td>小さく表示されるためコンパクト版が最適</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="index.html" style="color: #3498db; text-decoration: none; font-size: 1.1em;">← トップページに戻る</a>
+        </div>
     </div>
 </body>
 </html>

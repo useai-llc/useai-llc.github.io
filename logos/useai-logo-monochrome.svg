@@ -1,0 +1,6 @@
+<svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+    <!-- Use/AI モノクロ版（印刷用） -->
+    <text x="45" y="50" font-family="Arial, sans-serif" font-size="38" font-weight="600" fill="#000000" text-anchor="start">Use</text>
+    <line x1="95" y1="20" x2="105" y2="60" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+    <text x="115" y="50" font-family="Arial, sans-serif" font-size="38" font-weight="600" fill="#000000" text-anchor="start">AI</text>
+</svg>
