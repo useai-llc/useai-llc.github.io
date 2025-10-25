@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\n公式ホームページを作成\n\n- CLAUDE.md: プロジェクト管理用ドキュメントを追加\n- index.html: 会社概要、事業内容、お問い合わせを含むトップページを作成\n- 銀行口座開設用に必要な企業情報を掲載\n- レスポンシブデザインに対応\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push)",
+      "Bash(git commit -m \"$(cat <<''EOF''\n検索エンジンのインデックスを防止\n\n- robots.txt: すべての検索エンジンのクロールを拒否\n- index.html: noindex, nofollowメタタグを追加\n- Google検索などに表示されないよう設定\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit -m \"$(cat <<''EOF''\n本社所在地を完全な住所に更新\n\n- 定款との整合性を確保するため、詳細な住所を記載\n- 銀行口座開設の審査に必要な情報を提供\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit -m \"$(cat <<''EOF''\n参考サイトを元にデザインを全面リニューアル\n\n- シンプルでモダンなデザインに刷新\n- Noto Sans JPフォントを採用し、可読性を向上\n- SVGでAIロゴを作成（グラデーション付き）\n- グリッドレイアウトで情報を整理\n- レスポンシブデザインを強化\n- カラーパレットを統一（CSS変数使用）\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
