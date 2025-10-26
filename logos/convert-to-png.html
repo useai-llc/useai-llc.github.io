@@ -223,6 +223,94 @@
             • 印刷物・高解像度: 2048px または 4096px<br>
             • オンラインデザインツール: 1024px または 2048px
         </div>
+
+        <h2 style="color: #2c3e50; margin-top: 40px; margin-bottom: 20px; font-size: 24px;">背景色のみ（ロゴなし）</h2>
+
+        <div class="logo-grid">
+            <!-- White Background -->
+            <div class="logo-item">
+                <div class="logo-title">白背景</div>
+                <div class="preview-area" style="background: #ffffff; border: 2px solid #ddd;">
+                    <div style="color: #999; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#ffffff', 'white')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#ffffff', 'white')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#ffffff', 'white')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#ffffff', 'white')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Light Gray Background -->
+            <div class="logo-item">
+                <div class="logo-title">ライトグレー背景</div>
+                <div class="preview-area" style="background: #f5f5f5;">
+                    <div style="color: #999; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#f5f5f5', 'lightgray')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#f5f5f5', 'lightgray')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#f5f5f5', 'lightgray')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#f5f5f5', 'lightgray')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Blue Background -->
+            <div class="logo-item">
+                <div class="logo-title">ブルー背景</div>
+                <div class="preview-area" style="background: #3498db;">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#3498db', 'blue')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#3498db', 'blue')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#3498db', 'blue')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#3498db', 'blue')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Dark Background -->
+            <div class="logo-item">
+                <div class="logo-title">ダーク背景</div>
+                <div class="preview-area" style="background: #2c3e50;">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#2c3e50', 'dark')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#2c3e50', 'dark')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#2c3e50', 'dark')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#2c3e50', 'dark')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Black Background -->
+            <div class="logo-item">
+                <div class="logo-title">黒背景</div>
+                <div class="preview-area" style="background: #000000;">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#000000', 'black')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#000000', 'black')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#000000', 'black')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#000000', 'black')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Gradient Background -->
+            <div class="logo-item">
+                <div class="logo-title">グラデーション背景（ブルー→ダーク）</div>
+                <div class="preview-area" style="background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadGradientBackground(512)">512px</button>
+                    <button class="btn" onclick="downloadGradientBackground(1024)">1024px</button>
+                    <button class="btn" onclick="downloadGradientBackground(2048)">2048px</button>
+                    <button class="btn" onclick="downloadGradientBackground(4096)">4096px</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <canvas id="canvas"></canvas>
@@ -284,6 +372,61 @@
                 console.error('Error converting to PNG:', error);
                 alert('PNG変換中にエラーが発生しました: ' + error.message);
             }
+        }
+
+        function downloadBackgroundOnly(size, bgColor, colorName) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size
+            canvas.width = size;
+            canvas.height = size;
+
+            // Fill with solid color
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, size, size);
+
+            // Convert to PNG and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `background-${colorName}-${size}px.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+
+        function downloadGradientBackground(size) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size
+            canvas.width = size;
+            canvas.height = size;
+
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#3498db');
+            gradient.addColorStop(1, '#2c3e50');
+
+            // Fill with gradient
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+
+            // Convert to PNG and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `background-gradient-${size}px.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
         }
     </script>
 </body>
