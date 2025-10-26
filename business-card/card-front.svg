@@ -1,0 +1,39 @@
+<svg width="344" height="208" viewBox="0 0 344 208" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap');
+            .text { font-family: 'Noto Sans JP', sans-serif; }
+            .name-en { font-size: 8px; fill: #999; font-weight: 400; }
+            .name { font-size: 14px; fill: #2c3e50; font-weight: 500; }
+            .title { font-size: 9px; fill: #666; font-weight: 300; }
+            .info { font-size: 8.5px; fill: #666; font-weight: 300; }
+        </style>
+    </defs>
+
+    <!-- 背景 -->
+    <rect width="344" height="208" fill="white"/>
+
+    <!-- ロゴ -->
+    <g transform="translate(25, 54)">
+        <image href="../logos/useai-logo.svg" width="140" height="50"/>
+    </g>
+
+    <!-- テキスト情報 -->
+    <g transform="translate(180, 60)">
+        <!-- 読み仮名 -->
+        <text class="text name-en" x="0" y="0">Kenta Suzuki</text>
+
+        <!-- 名前 -->
+        <text class="text name" x="0" y="12">鈴木 健太</text>
+
+        <!-- 役職 -->
+        <text class="text title" x="0" y="24">代表社員</text>
+
+        <!-- 会社情報 -->
+        <text class="text info" x="0" y="37">ユーズAI合同会社</text>
+        <text class="text info" x="0" y="47">〒179-0081</text>
+        <text class="text info" x="0" y="57">東京都練馬区早宮3-31-9</text>
+        <text class="text info" x="0" y="67">M: 090-2527-5002</text>
+        <text class="text info" x="0" y="77">info.useai.llc@gmail.com</text>
+    </g>
+</svg>
