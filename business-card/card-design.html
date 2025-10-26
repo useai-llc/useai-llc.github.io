@@ -56,10 +56,11 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            padding: 30px;
+            padding: 25px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
             position: relative;
             transition: transform 0.3s;
         }
@@ -68,45 +69,46 @@
             transform: rotateY(5deg) rotateX(2deg);
         }
 
-        .card-header {
-            margin-bottom: 20px;
+        .card-logo {
+            flex-shrink: 0;
         }
 
         .card-logo img {
-            width: 110px;
+            width: 80px;
             height: auto;
         }
 
-        .card-body {
+        .card-content {
+            flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .card-name {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 500;
             color: #2c3e50;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             letter-spacing: 0.05em;
         }
 
         .card-title {
-            font-size: 11px;
+            font-size: 10px;
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
             font-weight: 300;
         }
 
         .card-info {
-            font-size: 10px;
+            font-size: 9px;
             color: #666;
-            line-height: 1.7;
+            line-height: 1.6;
             font-weight: 300;
         }
 
         .card-info div {
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .card-contact {
@@ -207,19 +209,18 @@
         <h2 style="text-align: center; color: #2c3e50; margin: 40px 0 30px; font-size: 1.5em;">表面</h2>
         <div class="card-wrapper">
             <div class="business-card">
-                <div class="card-header">
-                    <div class="card-logo">
-                        <img src="../logos/useai-logo.svg" alt="Use/AI">
-                    </div>
+                <div class="card-logo">
+                    <img src="../logos/useai-logo.svg" alt="Use/AI">
                 </div>
-                <div class="card-body">
+                <div class="card-content">
                     <div>
                         <div class="card-name">鈴木 健太</div>
                         <div class="card-title">代表社員</div>
                     </div>
                     <div class="card-info">
                         <div>ユーズAI合同会社</div>
-                        <div>〒179-0081 東京都練馬区早宮3-31-9</div>
+                        <div>〒179-0081</div>
+                        <div>東京都練馬区早宮3-31-9</div>
                         <div class="card-contact">M: 090-2527-5002</div>
                         <div class="card-contact">info.useai.llc@gmail.com</div>
                     </div>
