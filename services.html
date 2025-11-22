@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>サービス - ユーズAI合同会社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container {
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            height: auto;
+        }
+
+        .company-info {
+            text-align: center;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        .breadcrumb {
+            background: var(--light-bg);
+            padding: 15px 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 60px 20px;
+        }
+
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .service-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .service-section {
+            margin-bottom: 30px;
+        }
+
+        .service-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "●";
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .service-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .price-box {
+            background: var(--light-bg);
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .price-note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--light-bg);
+            margin-top: 60px;
+        }
+
+        .cta-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: var(--dark-color);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            .company-name {
+                font-size: 20px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+
+            .page-title {
+                font-size: 24px;
+            }
+
+            .service-title {
+                font-size: 22px;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .price {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="logos/useai-logo-white.svg" alt="Use/AI ユーズAI合同会社" class="logo" style="width: 140px; height: auto;">
+                </div>
+                <div class="company-info">
+                    <div class="company-name">ユーズAI合同会社</div>
+                    <div class="tagline">AIで、アイデアを形に</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">ホーム</a> &gt; サービス
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">サービスメニュー</h1>
+
+            <div class="service-card">
+                <h2 class="service-title">開発チームマネジメントサービス</h2>
+
+                <div class="service-section">
+                    <h3 class="section-title">サービス内容</h3>
+                    <p>
+                        開発チームの生産性向上とプロダクト品質の向上をサポートします。<br>
+                        技術的なマネジメントからチームビルディングまで、包括的な支援を提供いたします。
+                    </p>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">提供内容</h3>
+                    <ul class="service-list">
+                        <li>週平均5時間以上のミーティング（定例MTG、1on1、技術相談など）</li>
+                        <li>開発・コラボレーションツールの利用（GitHub Enterprise / Slack / Notion）</li>
+                        <li>アーキテクチャ設計およびコードレビューのサポート</li>
+                        <li>エンジニアの人事評価に関するアドバイス</li>
+                    </ul>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">こんな課題を解決します</h3>
+                    <ul class="service-list">
+                        <li>開発チームのマネジメントに課題を感じている</li>
+                        <li>技術的な意思決定をサポートしてほしい</li>
+                        <li>コードの品質やアーキテクチャを改善したい</li>
+                        <li>エンジニアの評価基準を明確にしたい</li>
+                        <li>チームの生産性を向上させたい</li>
+                    </ul>
+                </div>
+
+                <div class="price-box">
+                    <div class="section-title" style="margin-bottom: 10px;">料金</div>
+                    <div class="price">月額 100,000円</div>
+                    <div class="price-note">※税別価格です</div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2 class="cta-title">お気軽にご相談ください</h2>
+                <a href="mailto:info.useai.llc@gmail.com" class="cta-button">お問い合わせ</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ユーズAI合同会社 All Rights Reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html">ホーム</a> |
+                <a href="services.html">サービス</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
