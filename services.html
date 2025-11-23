@@ -168,6 +168,87 @@
             font-size: 18px;
         }
 
+        .pricing-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .pricing-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 18px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        .pricing-label {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .pricing-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 8px;
+        }
+
+        .pricing-note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .pricing-includes {
+            background: #f9f9f9;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 15px 18px;
+            margin-top: 15px;
+        }
+
+        .pricing-includes h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 8px;
+        }
+
+        .pricing-includes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .pricing-includes li {
+            position: relative;
+            padding-left: 18px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        .pricing-includes li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .included-value {
+            margin-top: 10px;
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
         .price-box {
             background: var(--light-bg);
             padding: 20px 30px;
@@ -422,6 +503,18 @@
                 font-size: 13px;
             }
 
+            .pricing-value {
+                font-size: 18px;
+            }
+
+            .pricing-label {
+                font-size: 15px;
+            }
+
+            .pricing-list {
+                grid-template-columns: 1fr;
+            }
+
             .use-case {
                 padding: 20px;
             }
@@ -458,13 +551,13 @@
             <h1 class="page-title">サービスメニュー</h1>
 
             <div class="service-card">
-                <h2 class="service-title">開発チームマネジメントサービス</h2>
+                <h2 class="service-title">UseAI コードで引っ張るフルスタック伴走</h2>
 
                 <div class="service-section">
                     <h3 class="section-title">サービス内容</h3>
                     <p>
                         AI/ソフトウェア開発組織の立ち上げからスケールまでを伴走支援します。<br>
-                        CTO経験者がプロダクト戦略と組織運営の両面をリードし、短期間で成果が出るチームをつくります。
+                        インフラからフロントまでのフルスタック経験と大規模コンシューマサービス開発の実績をもとに、サービス/プロダクト開発とDX支援を<strong>実務的に伴走</strong>します。コードもドキュメントも手を動かし、背中を見せるコーチングで短期間に成果が出るチームをつくります。
                     </p>
                 </div>
 
@@ -485,85 +578,91 @@
                         <li>技術選定やアーキテクチャに自信がなく、意思決定を伴走してほしい</li>
                         <li>レビュー体制が属人化し、品質やリリース速度にムラがある</li>
                         <li>評価制度や育成の軸が曖昧で、メンバーの成長と納得感を高めたい</li>
-                        <li>経営サイドへ技術リスク・投資効果を整理し、対話の材料を揃えたい</li>
+                        <li>エンジニア組織の運用が初めてで、どこから手を付ければよいか知りたい</li>
                     </ul>
                 </div>
 
                 <div class="service-section">
                     <h3 class="section-title">支援の進め方</h3>
                     <ul class="service-list">
-                        <li>初月：現状診断（プロセス・コードベース・メンバー構成をレビュー）と優先課題の整理</li>
-                        <li>1〜2ヶ月目：開発プロセスとガイドラインを設計し、週次で実装・レビューを伴走</li>
-                        <li>3ヶ月目以降：定常運用に移行し、KPI/OKRのモニタリングと改善サイクルを設計</li>
-                        <li>適宜：経営層/プロダクトオーナーへの報告資料を作成し、意思決定をサポート</li>
+                        <li>作りたいプロダクトとメンバーがいる状態、または既存運用課題の洗い出しから開始</li>
+                        <li>Google Cloud / Google Workspace を基盤に社内DXを設計し、インフラは原則GCPで構築</li>
+                        <li>AIツール（Claude Pro または ChatGPT Plus）を1つ導入し、Slack・Notion・GitHubと連携</li>
+                        <li>プロジェクト初日から AIツール・Slack・Notion・GitHub を整備し、開発コラボレーションを即稼働</li>
+                        <li>AIツールと開発ツールを組み合わせ、安定した開発と情報共有を仕組み化</li>
                     </ul>
+                    <div class="pricing-includes" style="margin-top: 12px;">
+                        <h4>導入スケジュール例</h4>
+                        <ul>
+                            <li><strong>準備フェーズ</strong>：契約・セットアップ（Notion/Slack/GitHub）、ワークスペース構築と権限設定、ゲスト招待とテスト</li>
+                            <li><strong>立ち上げフェーズ</strong>：メンバーオンボーディング、初回週次定例、Notion AIで議事録自動化を実施</li>
+                            <li><strong>定着フェーズ</strong>：日常運用で課題を洗い出し、ルールを調整しながら目標と指標を継続的にフォロー</li>
+                            <li><strong>拡張フェーズ（スパイラル型）</strong>：小さなリリースを積み重ね、必要に応じてメンバーの追加・ローテーションやツール連携を柔軟に調整</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="service-section">
                     <h3 class="section-title">成果物・アウトプット例</h3>
                     <ul class="service-list">
-                        <li>開発プロセス・レビュー体制の設計書、リリースチェックリスト</li>
-                        <li>アーキテクチャ提案・リファクタリング計画、品質ガイドライン</li>
-                        <li>人材育成プラン、評価項目サンプル、採用要件定義</li>
-                        <li>経営層向けレポート（リスク/ロードマップ/投資対効果の整理）</li>
+                        <li>Notionに集約したプロジェクト管理・ドキュメント・ナレッジ基盤（ゲスト共有設定付き）</li>
+                        <li>GitHubでのソースコード・レビュー履歴・CI設定一式</li>
+                        <li>Slackでのコミュニケーション履歴と監視/アラート連携の運用ルール</li>
+                        <li>AI議事録付きの定例/1on1ログ、教育用カリキュラムとトラッキング</li>
                     </ul>
+                    <div class="pricing-includes" style="margin-top: 12px;">
+                        <h4 style="font-size: 15px;">Notion 構成イメージ</h4>
+                        <ul>
+                            <li>📋 プロジェクト管理：案件ボード、スプリント、進捗レポート（ゲストは閲覧/コメント）</li>
+                            <li>📝 ドキュメント：仕様書・設計書・社内ドキュメントを権限別に整理</li>
+                            <li>🎓 ナレッジ：開発ガイドライン、コーディング規約、ベストプラクティス、FAQ</li>
+                            <li>👨‍🎓 教育：カリキュラム、演習、進捗トラッキング、1on1議事録（必要に応じ限定権限）</li>
+                            <li>📅 会議議事録：週次定例/顧客MTG/1on1のAI議事録を集約</li>
+                            <li>📊 レポート：月次レポート、振り返り、目標・指標の管理</li>
+                            <li>⚙️ 運用・管理：オンボーディング、契約・アカウント一覧、緊急連絡先（機密は限定権限）</li>
+                        </ul>
                 </div>
 
-                <div class="price-box">
-                    <div class="section-title" style="margin-bottom: 10px;">料金体系</div>
+                <div class="service-section">
+                    <h3 class="section-title">料金体系</h3>
 
-                    <div class="pricing-table-wrapper">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>項目</th>
-                                    <th>対象人数</th>
-                                    <th>月額料金（税別）</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="pricing-highlight">
-                                    <td><strong>基本料金</strong><br><span style="font-size: 12px; color: #f39c12;">★ 5名まで含む</span></td>
-                                    <td><strong>1〜5名</strong></td>
-                                    <td><strong>100,000円</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>追加メンバー</td>
-                                    <td>6名目以降、1名ごと</td>
-                                    <td>+20,000円</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="pricing-list">
+                        <div class="pricing-item">
+                            <div class="pricing-label">基本料金（1〜5名まで）</div>
+                            <div class="pricing-value">月額 100,000円（税別）</div>
+                            <p class="pricing-note">週5時間〜月20時間のマネジメント支援を含む</p>
+                            <p class="pricing-note">準備期間は初月無料、解約は前月までにお申し出ください</p>
+                        </div>
+                        <div class="pricing-item">
+                            <div class="pricing-label">追加メンバー</div>
+                            <div class="pricing-value">1名ごと +20,000円</div>
+                            <p class="pricing-note">6名目以降から適用</p>
+                        </div>
                     </div>
 
-                    <div class="tool-breakdown">
+                    <div class="pricing-includes">
                         <h4>基本料金に含まれる内容</h4>
                         <ul>
-                            <li><strong>週5時間〜月20時間</strong>のマネジメント支援（時間単価5,000円相当）</li>
+                            <li>
+                                <strong>週5時間〜月20時間</strong>のマネジメント支援（時間単価5,000円相当）
+                                <div class="included-value">➡ 週5時間×4週＝約10万円相当の支援が基本料金に含まれています</div>
+                            </li>
                             <li>開発・コラボレーションツール費用（実費）
-                                <ul style="margin-top: 8px; margin-left: 20px; font-size: 13px; color: #666;">
-                                    <li>GitHub Enterprise：月額21ドル（約3,000円）/名</li>
-                                    <li>Slack Business+：月額1,600円/名</li>
-                                    <li>Notion Business：月額15ドル（約2,200円）/名</li>
+                                <ul style="margin-top: 6px; margin-left: 16px; font-size: 13px; color: #666;">
+                                    <li>GitHub Team：月額9ドル（約1,350円）/名（月払い）</li>
+                                    <li>Slack Pro：月額8.75ドル（約1,300円）/名（月払い）</li>
+                                    <li>Notion Plus：月額10ドル（約1,500円）/名（月払い）</li>
                                 </ul>
+                                <div class="included-value" style="margin-top: 8px;">➡ さらに開発ツール費用（約4,200円/名）も含まれているため、さらにお得です</div>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="value-note">
-                        💡 <strong>お得なポイント：</strong><br>
-                        週5時間以上〜月20時間のマネジメント支援を時間単価5,000円で換算すると10万円相当。さらに開発ツール費用（約7,000円/名）も含まれているため、実質的にマネジメント支援がお得な価格で受けられます。
-                    </div>
-
-                    <div class="price-note" style="margin-top: 15px;">
+                    <div class="price-note" style="margin-top: 12px;">
                         ※ツール費用の為替レートは目安です<br>
                         ※追加メンバーごとにツールアカウントを払い出します
                     </div>
 
-                    <div class="trial-note">
-                        🎁 <strong>初月無料キャンペーン実施中！</strong><br>
-                        初めてのお客様は、初月の基本料金が無料でお試しいただけます。ツール費用のみご負担ください。
-                    </div>
                 </div>
 
                 <div class="service-section">
