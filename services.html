@@ -187,8 +187,16 @@
             margin-top: 5px;
         }
 
+        .pricing-table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0 -10px;
+            padding: 0 10px;
+        }
+
         .pricing-table {
             width: 100%;
+            min-width: 540px;
             border-collapse: collapse;
             margin-top: 20px;
         }
@@ -504,27 +512,29 @@
                 <div class="price-box">
                     <div class="section-title" style="margin-bottom: 10px;">料金体系</div>
 
-                    <table class="pricing-table">
-                        <thead>
-                            <tr>
-                                <th>項目</th>
-                                <th>対象人数</th>
-                                <th>月額料金（税別）</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="pricing-highlight">
-                                <td><strong>基本料金</strong><br><span style="font-size: 12px; color: #f39c12;">★ 5名まで含む</span></td>
-                                <td><strong>1〜5名</strong></td>
-                                <td><strong>100,000円</strong></td>
-                            </tr>
-                            <tr>
-                                <td>追加メンバー</td>
-                                <td>6名目以降、1名ごと</td>
-                                <td>+20,000円</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="pricing-table-wrapper">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>対象人数</th>
+                                    <th>月額料金（税別）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="pricing-highlight">
+                                    <td><strong>基本料金</strong><br><span style="font-size: 12px; color: #f39c12;">★ 5名まで含む</span></td>
+                                    <td><strong>1〜5名</strong></td>
+                                    <td><strong>100,000円</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>追加メンバー</td>
+                                    <td>6名目以降、1名ごと</td>
+                                    <td>+20,000円</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <div class="tool-breakdown">
                         <h4>基本料金に含まれる内容</h4>
