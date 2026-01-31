@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZVLNGKB');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>サービス - ユーズAI株式会社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container {
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            height: auto;
+        }
+
+        .company-info {
+            text-align: center;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        .breadcrumb {
+            background: var(--light-bg);
+            padding: 15px 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 60px 20px;
+        }
+
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .service-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .service-section {
+            margin-bottom: 30px;
+        }
+
+        .service-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "●";
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .service-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .pricing-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .pricing-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 18px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        .pricing-label {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .pricing-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 8px;
+        }
+
+        .pricing-note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .pricing-includes {
+            background: #f9f9f9;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 15px 18px;
+            margin-top: 15px;
+        }
+
+        .pricing-includes h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 8px;
+        }
+
+        .pricing-includes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .pricing-includes li {
+            position: relative;
+            padding-left: 18px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        .pricing-includes li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .included-value {
+            margin-top: 10px;
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .price-box {
+            background: var(--light-bg);
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .price-note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .pricing-table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0 -10px;
+            padding: 0 10px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            min-width: 540px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-table th {
+            background: var(--dark-color);
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .pricing-table td {
+            font-size: 15px;
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-highlight {
+            background: #fff9e6;
+            font-weight: 700;
+        }
+
+        .tool-breakdown {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .tool-breakdown h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+
+        .tool-breakdown ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tool-breakdown li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tool-breakdown li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .value-note {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .trial-note {
+            background: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 15px 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .use-case {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .use-case-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .use-case-situation {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .use-case-situation h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .use-case-result {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .use-case-result h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--light-bg);
+            margin-top: 60px;
+        }
+
+        .cta-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: var(--dark-color);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            .company-name {
+                font-size: 20px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+
+            .page-title {
+                font-size: 24px;
+            }
+
+            .service-title {
+                font-size: 22px;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .price {
+                font-size: 24px;
+            }
+
+            .pricing-table {
+                font-size: 13px;
+            }
+
+            .pricing-table th,
+            .pricing-table td {
+                padding: 10px;
+            }
+
+            .tool-breakdown {
+                font-size: 13px;
+                padding: 15px;
+            }
+
+            .value-note {
+                font-size: 13px;
+            }
+
+            .trial-note {
+                font-size: 13px;
+            }
+
+            .pricing-value {
+                font-size: 18px;
+            }
+
+            .pricing-label {
+                font-size: 15px;
+            }
+
+            .pricing-list {
+                grid-template-columns: 1fr;
+            }
+
+            .use-case {
+                padding: 20px;
+            }
+
+            .use-case-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZVLNGKB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="logos/useai-logo-white.svg" alt="Use/AI ユーズAI株式会社" class="logo" style="width: 140px; height: auto;">
+                </div>
+                <div class="company-info">
+                    <div class="company-name">ユーズAI株式会社</div>
+                    <div class="tagline">AIで、アイデアを形に</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">ホーム</a> &gt; サービス
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">サービスメニュー</h1>
+
+            <div class="service-card">
+                <h2 class="service-title">UseAI コードで引っ張るフルスタック伴走</h2>
+
+                <div class="service-section">
+                    <h3 class="section-title">サービス内容</h3>
+                    <p>
+                        AI/ソフトウェア開発組織の立ち上げからスケールまでを伴走支援します。<br>
+                        インフラからフロントまでのフルスタック経験と大規模コンシューマサービス開発の実績をもとに、サービス/プロダクト開発とDX支援を<strong>実務的に伴走</strong>します。コードもドキュメントも手を動かし、背中を見せるコーチングで短期間に成果が出るチームをつくります。
+                    </p>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">提供内容</h3>
+                    <ul class="service-list">
+                        <li>週平均5時間以上のミーティング（定例MTG、1on1、技術相談、経営陣ブリーフィングを含む）</li>
+                        <li>開発プロセス設計（スクラム/カンバン運用、リリース基準、インシデント対応フロー）</li>
+                        <li>アーキテクチャ設計およびコードレビュー、品質ガイドライン作成</li>
+                        <li>メンバーの育成計画策定と評価基準の言語化、採用計画への助言</li>
+                    </ul>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">こんな課題を解決します</h3>
+                    <ul class="service-list">
+                        <li>「まず何から整えるべきか」がわからない開発組織を短期間で立ち上げたい</li>
+                        <li>技術選定やアーキテクチャに自信がなく、意思決定を伴走してほしい</li>
+                        <li>レビュー体制が属人化し、品質やリリース速度にムラがある</li>
+                        <li>評価制度や育成の軸が曖昧で、メンバーの成長と納得感を高めたい</li>
+                        <li>エンジニア組織の運用が初めてで、どこから手を付ければよいか知りたい</li>
+                    </ul>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">支援の進め方</h3>
+                    <ul class="service-list">
+                        <li>作りたいプロダクトとメンバーがいる状態、または既存運用課題の洗い出しから開始</li>
+                        <li>Google Cloud / Google Workspace を基盤に社内DXを設計し、インフラは原則GCPで構築</li>
+                        <li>AIツール（Claude Pro または ChatGPT Plus）を1つ導入し、Slack・Notion・GitHubと連携</li>
+                        <li>プロジェクト初日からAIツール・Slack・Notion・GitHub を整備し、開発コラボレーションを即稼働</li>
+                        <li>AIツールと開発ツールを組み合わせ、安定した開発と情報共有を仕組み化</li>
+                    </ul>
+                    <div class="pricing-includes" style="margin-top: 12px;">
+                        <h4>導入スケジュール例</h4>
+                        <ul>
+                            <li><strong>準備フェーズ</strong>：契約・セットアップ（Notion/Slack/GitHub）、ワークスペース構築と権限設定、ゲスト招待とテスト</li>
+                            <li><strong>立ち上げフェーズ</strong>：メンバーオンボーディング、初回週次定例、Notion AIで議事録自動化を実施</li>
+                            <li><strong>定着フェーズ</strong>：日常運用で課題を洗い出し、ルールを調整しながら目標と指標を継続的にフォロー</li>
+                            <li><strong>拡張フェーズ（スパイラル型）</strong>：小さなリリースを積み重ね、必要に応じてメンバーの追加・ローテーションやツール連携を柔軟に調整</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">成果物・アウトプット例</h3>
+                    <ul class="service-list">
+                        <li>Notionに集約したプロジェクト管理・ドキュメント・ナレッジ基盤（ゲスト共有設定付き）</li>
+                        <li>GitHubでのソースコード・レビュー履歴・CI設定一式</li>
+                        <li>Slackでのコミュニケーション履歴と監視/アラート連携の運用ルール</li>
+                        <li>AI議事録付きの定例/1on1ログ、教育用カリキュラムとトラッキング</li>
+                    </ul>
+                    <div class="pricing-includes" style="margin-top: 12px;">
+                        <h4 style="font-size: 15px;">Notion 構成イメージ</h4>
+                        <ul>
+                            <li>📋 プロジェクト管理：案件ボード、スプリント、進捗レポート（ゲストは閲覧/コメント）</li>
+                            <li>📝 ドキュメント：仕様書・設計書・社内ドキュメントを権限別に整理</li>
+                            <li>🎓 ナレッジ：開発ガイドライン、コーディング規約、ベストプラクティス、FAQ</li>
+                            <li>👨‍🎓 教育：カリキュラム、演習、進捗トラッキング、1on1議事録（必要に応じ限定権限）</li>
+                            <li>📅 会議議事録：週次定例/顧客MTG/1on1のAI議事録を集約</li>
+                            <li>📊 レポート：月次レポート、振り返り、目標・指標の管理</li>
+                            <li>⚙️ 運用・管理：オンボーディング、契約・アカウント一覧、緊急連絡先（機密は限定権限）</li>
+                        </ul>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">料金体系</h3>
+
+                    <div class="pricing-list">
+                        <div class="pricing-item">
+                            <div class="pricing-label">基本料金（1〜5名まで）</div>
+                            <div class="pricing-value">月額 100,000円（税別）</div>
+                            <p class="pricing-note">週5時間〜月20時間のマネジメント支援を含む</p>
+                            <p class="pricing-note">準備期間は初月無料、解約は前月までにお申し出ください</p>
+                        </div>
+                        <div class="pricing-item">
+                            <div class="pricing-label">追加メンバー</div>
+                            <div class="pricing-value">1名ごと +20,000円</div>
+                            <p class="pricing-note">6名目以降から適用</p>
+                        </div>
+                    </div>
+
+                    <div class="pricing-includes">
+                        <h4>基本料金に含まれる内容</h4>
+                        <ul>
+                            <li>
+                                <strong>週5時間〜月20時間</strong>のマネジメント支援（時間単価5,000円相当）
+                                <div class="included-value">➡ 週5時間×4週＝約10万円相当の支援が基本料金に含まれています</div>
+                            </li>
+                            <li>開発・コラボレーションツール費用（実費）
+                                <ul style="margin-top: 6px; margin-left: 16px; font-size: 13px; color: #666;">
+                                    <li>GitHub Team：月額9ドル（約1,350円）/名（月払い）</li>
+                                    <li>Slack Pro：月額8.75ドル（約1,300円）/名（月払い）</li>
+                                    <li>Notion Plus：月額10ドル（約1,500円）/名（月払い）</li>
+                                </ul>
+                                <div class="included-value" style="margin-top: 8px;">➡ 開発ツール費用（約4,200円/名）も含まれているため、お得です</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="price-note" style="margin-top: 12px;">
+                        ※ツール費用の為替レートは目安です<br>
+                        ※追加メンバーごとにツールアカウントを払い出します
+                    </div>
+
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">契約終了後について</h3>
+                    <p style="margin-bottom: 15px;">
+                        契約終了時には、ご利用いただいていたツールの内容をスムーズに引き継ぎます。
+                    </p>
+                    <ul class="service-list">
+                        <li><strong>GitHub：</strong>リポジトリのオーナー権限を移譲、またはエクスポートして御社のアカウントへ移行</li>
+                        <li><strong>Slack：</strong>ワークスペースのオーナー権限を移譲、または重要な会話履歴をエクスポート</li>
+                        <li><strong>Notion：</strong>ワークスペースのオーナー権限を移譲、またはページを御社のワークスペースへ移行</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #666; font-size: 14px;">
+                        ※契約終了後も、困った時だけスポットでサポートを受けることも可能です（別途お見積り）
+                    </p>
+                </div>
+
+                <div class="service-section">
+                    <h3 class="section-title">導入事例・ユースケース</h3>
+
+                    <div class="use-case">
+                        <div class="use-case-title">スタートアップ企業の開発チーム組成</div>
+
+                        <div class="use-case-situation">
+                            <h4>状況</h4>
+                            <p>
+                                プロパー社員1名（開発経験あり）+ 業務委託エンジニア2名で新規システムの開発を開始。<br>
+                                プロパー社員は開発経験はあるものの、本格的な開発組織をリードした経験がなく不安を抱えていた。
+                            </p>
+                        </div>
+
+                        <div class="use-case-result">
+                            <h4>導入後の成果</h4>
+                            <p>
+                                <strong>6ヶ月で開発チームを組成し、自立した運営が可能に。</strong><br>
+                                • 1〜2ヶ月目：アーキテクチャ設計とコードレビュー体制の確立<br>
+                                • 3〜4ヶ月目：開発プロセスの整備と1on1による育成<br>
+                                • 5〜6ヶ月目：段階的に自走できる体制へ移行<br>
+                                <br>
+                                契約終了後は、ツールの引き継ぎを完了し、必要に応じてスポットサポートを活用。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2 class="cta-title">お気軽にご相談ください</h2>
+                <a href="mailto:info@useai.co.jp" class="cta-button">お問い合わせ</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ユーズAI株式会社 All Rights Reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html">ホーム</a> |
+                <a href="services.html">サービス</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

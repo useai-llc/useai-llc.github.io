@@ -1,0 +1,12 @@
+<svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient-compact" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- Use/AI コンパクト版（ヘッダー用） -->
+    <text x="25" y="38" font-family="Arial, sans-serif" font-size="32" font-weight="600" fill="#2c3e50" text-anchor="start">Use</text>
+    <line x1="70" y1="15" x2="78" y2="45" stroke="url(#gradient-compact)" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="88" y="38" font-family="Arial, sans-serif" font-size="32" font-weight="600" fill="url(#gradient-compact)" text-anchor="start">AI</text>
+</svg>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZVLNGKB');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SVG to PNG Converter - Use/AI Logo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .logo-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .logo-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .preview-area {
+            background: white;
+            border: 2px dashed #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 15px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-area.dark {
+            background: #2c3e50;
+        }
+
+        .preview-area img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .size-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: 1px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn.primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn.primary:hover {
+            background: #2980b9;
+        }
+
+        .info {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+
+        canvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZVLNGKB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <h1>Use/AI ロゴ PNG変換ツール</h1>
+        <p class="subtitle">各ロゴをお好みのサイズでPNG形式にダウンロードできます</p>
+
+        <div class="info">
+            💡 サイズを選択してダウンロードボタンをクリックしてください。オンラインデザインツール（Canva、Figmaなど）で使用できます。
+        </div>
+
+        <div class="logo-grid">
+            <!-- Main Logo -->
+            <div class="logo-item">
+                <div class="logo-title">メインロゴ（透明背景）</div>
+                <div class="preview-area" id="preview-main">
+                    <img src="useai-logo.svg" alt="Main Logo">
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="convertToPNG('useai-logo.svg', 'useai-logo', 512, 'transparent')">512px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo.svg', 'useai-logo', 1024, 'transparent')">1024px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo.svg', 'useai-logo', 2048, 'transparent')">2048px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo.svg', 'useai-logo', 4096, 'transparent')">4096px</button>
+                </div>
+            </div>
+
+            <!-- White Logo for Dark Backgrounds -->
+            <div class="logo-item">
+                <div class="logo-title">白ロゴ（透明背景・ダークモード用）</div>
+                <div class="preview-area dark" id="preview-white">
+                    <img src="useai-logo-white.svg" alt="White Logo">
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="convertToPNG('useai-logo-white.svg', 'useai-logo-white', 512, 'transparent')">512px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-white.svg', 'useai-logo-white', 1024, 'transparent')">1024px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-white.svg', 'useai-logo-white', 2048, 'transparent')">2048px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-white.svg', 'useai-logo-white', 4096, 'transparent')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Square Logo -->
+            <div class="logo-item">
+                <div class="logo-title">正方形ロゴ（SNS用・透明背景）</div>
+                <div class="preview-area" id="preview-square">
+                    <img src="useai-logo-square.svg" alt="Square Logo">
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="convertToPNG('useai-logo-square.svg', 'useai-logo-square', 512, 'transparent')">512px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-square.svg', 'useai-logo-square', 1024, 'transparent')">1024px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-square.svg', 'useai-logo-square', 2048, 'transparent')">2048px</button>
+                </div>
+            </div>
+
+            <!-- Circle Logo -->
+            <div class="logo-item">
+                <div class="logo-title">円形ロゴ（SNS用・透明背景）</div>
+                <div class="preview-area" id="preview-circle">
+                    <img src="useai-logo-circle.svg" alt="Circle Logo">
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="convertToPNG('useai-logo-circle.svg', 'useai-logo-circle', 512, 'transparent')">512px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-circle.svg', 'useai-logo-circle', 1024, 'transparent')">1024px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-circle.svg', 'useai-logo-circle', 2048, 'transparent')">2048px</button>
+                </div>
+            </div>
+
+            <!-- Horizontal Compact Logo -->
+            <div class="logo-item">
+                <div class="logo-title">横長ロゴ（ヘッダー用・透明背景）</div>
+                <div class="preview-area" id="preview-horizontal">
+                    <img src="useai-logo-horizontal-compact.svg" alt="Horizontal Logo">
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="convertToPNG('useai-logo-horizontal-compact.svg', 'useai-logo-horizontal-compact', 512, 'transparent')">512px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-horizontal-compact.svg', 'useai-logo-horizontal-compact', 1024, 'transparent')">1024px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-horizontal-compact.svg', 'useai-logo-horizontal-compact', 2048, 'transparent')">2048px</button>
+                </div>
+            </div>
+
+            <!-- Monochrome Logo -->
+            <div class="logo-item">
+                <div class="logo-title">モノクロロゴ（印刷用・透明背景）</div>
+                <div class="preview-area" id="preview-mono">
+                    <img src="useai-logo-monochrome.svg" alt="Monochrome Logo">
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="convertToPNG('useai-logo-monochrome.svg', 'useai-logo-monochrome', 512, 'transparent')">512px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-monochrome.svg', 'useai-logo-monochrome', 1024, 'transparent')">1024px</button>
+                    <button class="btn" onclick="convertToPNG('useai-logo-monochrome.svg', 'useai-logo-monochrome', 2048, 'transparent')">2048px</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            📌 推奨サイズ：<br>
+            • SNSアイコン: 512px または 1024px<br>
+            • 印刷物・高解像度: 2048px または 4096px<br>
+            • オンラインデザインツール: 1024px または 2048px
+        </div>
+
+        <h2 style="color: #2c3e50; margin-top: 40px; margin-bottom: 20px; font-size: 24px;">背景色のみ - 正方形</h2>
+
+        <div class="logo-grid">
+            <!-- White Background -->
+            <div class="logo-item">
+                <div class="logo-title">白背景</div>
+                <div class="preview-area" style="background: #ffffff; border: 2px solid #ddd;">
+                    <div style="color: #999; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#ffffff', 'white')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#ffffff', 'white')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#ffffff', 'white')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#ffffff', 'white')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Light Gray Background -->
+            <div class="logo-item">
+                <div class="logo-title">ライトグレー背景</div>
+                <div class="preview-area" style="background: #f5f5f5;">
+                    <div style="color: #999; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#f5f5f5', 'lightgray')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#f5f5f5', 'lightgray')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#f5f5f5', 'lightgray')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#f5f5f5', 'lightgray')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Blue Background -->
+            <div class="logo-item">
+                <div class="logo-title">ブルー背景</div>
+                <div class="preview-area" style="background: #3498db;">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#3498db', 'blue')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#3498db', 'blue')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#3498db', 'blue')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#3498db', 'blue')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Dark Background -->
+            <div class="logo-item">
+                <div class="logo-title">ダーク背景</div>
+                <div class="preview-area" style="background: #2c3e50;">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#2c3e50', 'dark')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#2c3e50', 'dark')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#2c3e50', 'dark')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#2c3e50', 'dark')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Black Background -->
+            <div class="logo-item">
+                <div class="logo-title">黒背景</div>
+                <div class="preview-area" style="background: #000000;">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBackgroundOnly(512, '#000000', 'black')">512px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(1024, '#000000', 'black')">1024px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(2048, '#000000', 'black')">2048px</button>
+                    <button class="btn" onclick="downloadBackgroundOnly(4096, '#000000', 'black')">4096px</button>
+                </div>
+            </div>
+
+            <!-- Gradient Background -->
+            <div class="logo-item">
+                <div class="logo-title">グラデーション背景（ブルー→ダーク）</div>
+                <div class="preview-area" style="background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);">
+                    <div style="color: white; font-size: 14px;">背景色のみ</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadGradientBackground(512)">512px</button>
+                    <button class="btn" onclick="downloadGradientBackground(1024)">1024px</button>
+                    <button class="btn" onclick="downloadGradientBackground(2048)">2048px</button>
+                    <button class="btn" onclick="downloadGradientBackground(4096)">4096px</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="color: #2c3e50; margin-top: 40px; margin-bottom: 20px; font-size: 24px;">背景色のみ - 名刺サイズ（55mm × 91mm）</h2>
+
+        <div class="info">
+            💳 名刺サイズの比率（縦55mm × 横91mm = 1:1.65）でダウンロードできます
+        </div>
+
+        <div class="logo-grid">
+            <!-- White Background - Business Card Size -->
+            <div class="logo-item">
+                <div class="logo-title">白背景（名刺サイズ）</div>
+                <div class="preview-area" style="background: #ffffff; border: 2px solid #ddd; aspect-ratio: 91/55;">
+                    <div style="color: #999; font-size: 14px;">91mm × 55mm</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBusinessCardBackground(1092, 660, '#ffffff', 'white')">300dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(2184, 1320, '#ffffff', 'white')">600dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(3640, 2200, '#ffffff', 'white')">1000dpi</button>
+                </div>
+            </div>
+
+            <!-- Light Gray Background - Business Card Size -->
+            <div class="logo-item">
+                <div class="logo-title">ライトグレー背景（名刺サイズ）</div>
+                <div class="preview-area" style="background: #f5f5f5; aspect-ratio: 91/55;">
+                    <div style="color: #999; font-size: 14px;">91mm × 55mm</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBusinessCardBackground(1092, 660, '#f5f5f5', 'lightgray')">300dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(2184, 1320, '#f5f5f5', 'lightgray')">600dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(3640, 2200, '#f5f5f5', 'lightgray')">1000dpi</button>
+                </div>
+            </div>
+
+            <!-- Blue Background - Business Card Size -->
+            <div class="logo-item">
+                <div class="logo-title">ブルー背景（名刺サイズ）</div>
+                <div class="preview-area" style="background: #3498db; aspect-ratio: 91/55;">
+                    <div style="color: white; font-size: 14px;">91mm × 55mm</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBusinessCardBackground(1092, 660, '#3498db', 'blue')">300dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(2184, 1320, '#3498db', 'blue')">600dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(3640, 2200, '#3498db', 'blue')">1000dpi</button>
+                </div>
+            </div>
+
+            <!-- Dark Background - Business Card Size -->
+            <div class="logo-item">
+                <div class="logo-title">ダーク背景（名刺サイズ）</div>
+                <div class="preview-area" style="background: #2c3e50; aspect-ratio: 91/55;">
+                    <div style="color: white; font-size: 14px;">91mm × 55mm</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBusinessCardBackground(1092, 660, '#2c3e50', 'dark')">300dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(2184, 1320, '#2c3e50', 'dark')">600dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(3640, 2200, '#2c3e50', 'dark')">1000dpi</button>
+                </div>
+            </div>
+
+            <!-- Black Background - Business Card Size -->
+            <div class="logo-item">
+                <div class="logo-title">黒背景（名刺サイズ）</div>
+                <div class="preview-area" style="background: #000000; aspect-ratio: 91/55;">
+                    <div style="color: white; font-size: 14px;">91mm × 55mm</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBusinessCardBackground(1092, 660, '#000000', 'black')">300dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(2184, 1320, '#000000', 'black')">600dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardBackground(3640, 2200, '#000000', 'black')">1000dpi</button>
+                </div>
+            </div>
+
+            <!-- Gradient Background - Business Card Size -->
+            <div class="logo-item">
+                <div class="logo-title">グラデーション背景（名刺サイズ）</div>
+                <div class="preview-area" style="background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); aspect-ratio: 91/55;">
+                    <div style="color: white; font-size: 14px;">91mm × 55mm</div>
+                </div>
+                <div class="size-buttons">
+                    <button class="btn" onclick="downloadBusinessCardGradient(1092, 660)">300dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardGradient(2184, 1320)">600dpi</button>
+                    <button class="btn" onclick="downloadBusinessCardGradient(3640, 2200)">1000dpi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        async function convertToPNG(svgPath, filename, size, bgColor) {
+            try {
+                // Fetch SVG content to avoid CORS issues
+                const response = await fetch(svgPath);
+                const svgText = await response.text();
+
+                // Create blob from SVG text
+                const svgBlob = new Blob([svgText], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(svgBlob);
+
+                const canvas = document.getElementById('canvas');
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+
+                img.onload = function() {
+                    // Set canvas size
+                    canvas.width = size;
+                    canvas.height = size;
+
+                    // Fill background if not transparent
+                    if (bgColor !== 'transparent') {
+                        ctx.fillStyle = bgColor;
+                        ctx.fillRect(0, 0, size, size);
+                    }
+
+                    // Calculate scaling to fit the image in the canvas while maintaining aspect ratio
+                    const scale = Math.min(size / img.width, size / img.height);
+                    const x = (size / 2) - (img.width / 2) * scale;
+                    const y = (size / 2) - (img.height / 2) * scale;
+
+                    ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
+
+                    // Convert to PNG and download
+                    canvas.toBlob(function(blob) {
+                        const downloadUrl = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = downloadUrl;
+                        a.download = `${filename}-${size}px.png`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(downloadUrl);
+                        URL.revokeObjectURL(url);
+                    }, 'image/png');
+                };
+
+                img.onerror = function() {
+                    alert('ロゴの読み込みに失敗しました');
+                    URL.revokeObjectURL(url);
+                };
+
+                img.src = url;
+            } catch (error) {
+                console.error('Error converting to PNG:', error);
+                alert('PNG変換中にエラーが発生しました: ' + error.message);
+            }
+        }
+
+        function downloadBackgroundOnly(size, bgColor, colorName) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size
+            canvas.width = size;
+            canvas.height = size;
+
+            // Fill with solid color
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, size, size);
+
+            // Convert to PNG and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `background-${colorName}-${size}px.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+
+        function downloadGradientBackground(size) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size
+            canvas.width = size;
+            canvas.height = size;
+
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#3498db');
+            gradient.addColorStop(1, '#2c3e50');
+
+            // Fill with gradient
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+
+            // Convert to PNG and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `background-gradient-${size}px.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+
+        function downloadBusinessCardBackground(width, height, bgColor, colorName) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size to business card dimensions (91mm x 55mm)
+            canvas.width = width;
+            canvas.height = height;
+
+            // Fill with solid color
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, width, height);
+
+            // Convert to PNG and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `businesscard-${colorName}-${width}x${height}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+
+        function downloadBusinessCardGradient(width, height) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size to business card dimensions
+            canvas.width = width;
+            canvas.height = height;
+
+            // Create gradient (diagonal)
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, '#3498db');
+            gradient.addColorStop(1, '#2c3e50');
+
+            // Fill with gradient
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            // Convert to PNG and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `businesscard-gradient-${width}x${height}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 'image/png');
+        }
+    </script>
+</body>
+</html>

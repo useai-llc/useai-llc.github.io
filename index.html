@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZVLNGKB');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="ユーズAI株式会社 - AIで、アイデアを形に。ソフトウェア開発、情報処理サービス、Webサイト制作、経営コンサルティング">
+    <title>ユーズAI株式会社 - AIで、アイデアを形に</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --text-light: #666;
+            --border-color: #e0e0e0;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: #fff;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        header {
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 160px;
+            height: auto;
+        }
+
+        .company-info {
+            text-align: center;
+        }
+
+        .company-name {
+            font-size: 1.4em;
+            font-weight: 500;
+            color: var(--primary-color);
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1em;
+            color: var(--text-light);
+            font-weight: 300;
+            letter-spacing: 0.08em;
+        }
+
+        main {
+            padding: 80px 0 80px;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .info-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 400;
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+
+        .info-value {
+            color: var(--text-color);
+            font-size: 0.95em;
+        }
+
+        .business-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .business-list li {
+            padding: 12px 0;
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.95em;
+            color: var(--text-color);
+        }
+
+        .business-list li:before {
+            content: "・";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background-color: var(--bg-light);
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .contact-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-label {
+            display: inline-block;
+            min-width: 80px;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 0.85em;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 0 20px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            .company-name {
+                font-size: 1.2em;
+            }
+
+            .tagline {
+                font-size: 0.9em;
+            }
+
+            main {
+                padding: 40px 0 60px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+                margin-bottom: 25px;
+            }
+
+            .info-row {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                padding: 12px 0;
+            }
+
+            .info-label {
+                font-size: 0.85em;
+            }
+
+            .info-value {
+                font-size: 0.9em;
+            }
+
+            .contact-info {
+                padding: 20px;
+            }
+
+            .contact-label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            section {
+                margin-bottom: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZVLNGKB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="logos/useai-logo-horizontal-compact.svg" alt="Use/AI ユーズAI株式会社" class="logo" style="width: 160px; height: auto;">
+                </div>
+                <div class="company-info">
+                    <div class="company-name">ユーズAI株式会社</div>
+                    <div class="tagline">AIで、アイデアを形に</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="business">
+            <h2>事業内容</h2>
+            <ul class="business-list">
+                <li>ソフトウェアの開発、販売及び保守</li>
+                <li>情報処理サービス業</li>
+                <li>Webサイトの企画、制作、運営及び管理</li>
+                <li>経営コンサルティング業</li>
+            </ul>
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="services.html" style="display: inline-block; background-color: var(--secondary-color); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 500; transition: opacity 0.3s;">サービスメニューを見る</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>会社概要</h2>
+            <div class="info-grid">
+                <div class="info-row">
+                    <div class="info-label">会社名</div>
+                    <div class="info-value">ユーズAI株式会社</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">代表社員</div>
+                    <div class="info-value">鈴木 健太</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">本社所在地</div>
+                    <div class="info-value">東京都練馬区早宮３丁目３１番９号</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">設立</div>
+                    <div class="info-value">令和7年10月17日</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">資本金</div>
+                    <div class="info-value">100万円</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">法人番号</div>
+                    <div class="info-value">6011603004901</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <div class="contact-info">
+                <p>
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:info@useai.co.jp">info@useai.co.jp</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ユーズAI株式会社 All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

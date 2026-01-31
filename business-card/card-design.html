@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZVLNGKB');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>名刺デザイン - ユーズAI株式会社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto+Sans JP', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1em;
+            font-weight: 300;
+        }
+
+        .card-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            perspective: 1000px;
+        }
+
+        /* 名刺サイズ: 91mm x 55mm (標準的な日本の名刺サイズ) */
+        /* 1mm ≈ 3.7795px */
+        .business-card {
+            width: 344px;  /* 91mm */
+            height: 208px; /* 55mm */
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 25px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .business-card:hover {
+            transform: rotateY(5deg) rotateX(2deg);
+        }
+
+        .card-logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-logo img {
+            width: 140px;
+            height: auto;
+        }
+
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-name-en {
+            font-size: 8px;
+            color: #999;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            margin-bottom: 1px;
+        }
+
+        .card-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 1px;
+            letter-spacing: 0.05em;
+        }
+
+        .card-title {
+            font-size: 9px;
+            color: #666;
+            margin-bottom: 3px;
+            font-weight: 300;
+        }
+
+        .card-info {
+            font-size: 8.5px;
+            color: #666;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .card-info div {
+            margin-bottom: 1px;
+        }
+
+        .card-contact {
+            color: #666;
+            font-weight: 300;
+        }
+
+        /* 背面デザイン */
+        .business-card-back {
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .business-card-back img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .business-card-back .tagline {
+            color: white;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .print-info {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .print-info h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .print-info p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .print-info ul {
+            color: #666;
+            line-height: 2;
+            margin-left: 20px;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin: 10px;
+        }
+
+        .download-btn:hover {
+            background: #2c3e50;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container > *:not(.card-wrapper) {
+                display: none;
+            }
+
+            .business-card {
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZVLNGKB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <h1>名刺デザイン</h1>
+        <p class="subtitle">ユーズAI株式会社 - シンプルでプロフェッショナルな名刺</p>
+
+        <h2 style="text-align: center; color: #2c3e50; margin: 40px 0 30px; font-size: 1.5em;">表面</h2>
+        <div class="card-wrapper">
+            <div class="business-card">
+                <div class="card-logo">
+                    <img src="../logos/useai-logo.svg" alt="Use/AI">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <div class="card-name-en">Kenta Suzuki</div>
+                        <div class="card-name">鈴木 健太</div>
+                        <div class="card-title">代表社員</div>
+                    </div>
+                    <div class="card-info">
+                        <div>ユーズAI株式会社</div>
+                        <div>〒179-0081</div>
+                        <div>東京都練馬区早宮3-31-9</div>
+                        <div>03-6821-7189</div>
+                        <div>info@useai.co.jp</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; color: #2c3e50; margin: 60px 0 30px; font-size: 1.5em;">裏面（オプション）</h2>
+        <div class="card-wrapper">
+            <div class="business-card business-card-back">
+                <img src="../logos/useai-logo-white.svg" alt="Use/AI">
+                <div class="tagline">AIで、アイデアを形に</div>
+            </div>
+        </div>
+
+        <div class="print-info">
+            <h2>📋 印刷仕様</h2>
+            <p><strong>サイズ:</strong> 91mm × 55mm （日本標準サイズ）</p>
+            <p><strong>用紙:</strong> マットコート紙 220kg または 上質紙 180kg 推奨</p>
+            <p><strong>印刷方法:</strong> オフセット印刷 または オンデマンド印刷</p>
+
+            <h2 style="margin-top: 30px;">💡 おすすめ印刷会社</h2>
+            <ul>
+                <li>ラクスル (raksul.com) - 安価で高品質</li>
+                <li>プリントパック (printpac.co.jp) - 短納期対応</li>
+                <li>グラフィック (graphic.jp) - プロ向け高品質</li>
+            </ul>
+
+            <h2 style="margin-top: 30px;">🎨 カスタマイズポイント</h2>
+            <ul>
+                <li>ロゴは ../logos/ フォルダから選択可能</li>
+                <li>裏面は省略してコストダウンも可</li>
+                <li>QRコードを追加してWebサイトへ誘導も効果的</li>
+            </ul>
+        </div>
+
+        <div class="download-section">
+            <p style="color: #666; margin-bottom: 20px;">このページを印刷して印刷会社に提出できます</p>
+            <button onclick="window.print()" class="download-btn">🖨️ 印刷プレビュー</button>
+            <a href="../logo-preview.html" class="download-btn" style="background: #666;">📁 ロゴ一覧に戻る</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="../index.html" style="color: #3498db; text-decoration: none; font-size: 1.1em;">← トップページに戻る</a>
+        </div>
+    </div>
+</body>
+</html>
