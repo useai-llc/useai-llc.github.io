@@ -562,7 +562,7 @@
             <h1 class="page-title">サービスメニュー</h1>
 
             <div class="service-card">
-                <h2 class="service-title">UseAI コードで引っ張るフルスタック伴走</h2>
+                <h2 class="service-title">UseAI 開発伴走プログラム</h2>
 
                 <div class="service-section">
                     <h3 class="section-title">サービス内容</h3>
@@ -598,15 +598,15 @@
                     <ul class="service-list">
                         <li>作りたいプロダクトとメンバーがいる状態、または既存運用課題の洗い出しから開始</li>
                         <li>Google Cloud / Google Workspace を基盤に社内DXを設計し、インフラは原則GCPで構築</li>
-                        <li>AIツール（Claude Pro または ChatGPT Plus）を1つ導入し、Slack・Notion・GitHubと連携</li>
-                        <li>プロジェクト初日からAIツール・Slack・Notion・GitHub を整備し、開発コラボレーションを即稼働</li>
+                        <li>Claude Proを導入し、コミュニケーションツール・GitHubと連携</li>
+                        <li>プロジェクト初日からClaude Pro・コミュニケーションツール・GitHub を整備し、開発コラボレーションを即稼働</li>
                         <li>AIツールと開発ツールを組み合わせ、安定した開発と情報共有を仕組み化</li>
                     </ul>
                     <div class="pricing-includes" style="margin-top: 12px;">
                         <h4>導入スケジュール例</h4>
                         <ul>
-                            <li><strong>準備フェーズ</strong>：契約・セットアップ（Notion/Slack/GitHub）、ワークスペース構築と権限設定、ゲスト招待とテスト</li>
-                            <li><strong>立ち上げフェーズ</strong>：メンバーオンボーディング、初回週次定例、Notion AIで議事録自動化を実施</li>
+                            <li><strong>準備フェーズ</strong>：契約・セットアップ（コミュニケーションツール/GitHub）、ワークスペース構築と権限設定、ゲスト招待とテスト</li>
+                            <li><strong>立ち上げフェーズ</strong>：メンバーオンボーディング、初回週次定例、Claude Proでの開発支援を開始</li>
                             <li><strong>定着フェーズ</strong>：日常運用で課題を洗い出し、ルールを調整しながら目標と指標を継続的にフォロー</li>
                             <li><strong>拡張フェーズ（スパイラル型）</strong>：小さなリリースを積み重ね、必要に応じてメンバーの追加・ローテーションやツール連携を柔軟に調整</li>
                         </ul>
@@ -616,21 +616,18 @@
                 <div class="service-section">
                     <h3 class="section-title">成果物・アウトプット例</h3>
                     <ul class="service-list">
-                        <li>Notionに集約したプロジェクト管理・ドキュメント・ナレッジ基盤（ゲスト共有設定付き）</li>
-                        <li>GitHubでのソースコード・レビュー履歴・CI設定一式</li>
-                        <li>Slackでのコミュニケーション履歴と監視/アラート連携の運用ルール</li>
-                        <li>AI議事録付きの定例/1on1ログ、教育用カリキュラムとトラッキング</li>
+                        <li>GitHubでのソースコード・ドキュメント・レビュー履歴・CI設定一式</li>
+                        <li>コミュニケーションツールでの履歴と監視/アラート連携の運用ルール</li>
+                        <li>定例/1on1ログ、教育用カリキュラムとトラッキング</li>
                     </ul>
                     <div class="pricing-includes" style="margin-top: 12px;">
-                        <h4 style="font-size: 15px;">Notion 構成イメージ</h4>
+                        <h4 style="font-size: 15px;">GitHub 構成イメージ</h4>
                         <ul>
-                            <li>📋 プロジェクト管理：案件ボード、スプリント、進捗レポート（ゲストは閲覧/コメント）</li>
-                            <li>📝 ドキュメント：仕様書・設計書・社内ドキュメントを権限別に整理</li>
-                            <li>🎓 ナレッジ：開発ガイドライン、コーディング規約、ベストプラクティス、FAQ</li>
-                            <li>👨‍🎓 教育：カリキュラム、演習、進捗トラッキング、1on1議事録（必要に応じ限定権限）</li>
-                            <li>📅 会議議事録：週次定例/顧客MTG/1on1のAI議事録を集約</li>
-                            <li>📊 レポート：月次レポート、振り返り、目標・指標の管理</li>
-                            <li>⚙️ 運用・管理：オンボーディング、契約・アカウント一覧、緊急連絡先（機密は限定権限）</li>
+                            <li>📋 プロジェクト管理：GitHub Projects でタスク・スプリント・進捗を管理</li>
+                            <li>📝 ドキュメント：仕様書・設計書・ナレッジをMarkdownで管理</li>
+                            <li>🎓 開発ガイド：コーディング規約、ベストプラクティス、FAQ</li>
+                            <li>🔄 CI/CD：GitHub Actions で自動テスト・デプロイを構築</li>
+                            <li>👀 コードレビュー：PRベースのレビュー体制を整備</li>
                         </ul>
                 </div>
 
@@ -658,20 +655,21 @@
                                 <strong>週5時間〜月20時間</strong>のマネジメント支援（時間単価5,000円相当）
                                 <div class="included-value">➡ 週5時間×4週＝約10万円相当の支援が基本料金に含まれています</div>
                             </li>
-                            <li>開発・コラボレーションツール費用（実費）
+                            <li>Claude Pro ライセンス（月額$20 ≒ 約3,000円/名）
+                                <div class="included-value" style="margin-top: 8px;">➡ AIペアプログラミングツールが含まれています</div>
+                            </li>
+                            <li>開発ツール（無料プラン）
                                 <ul style="margin-top: 6px; margin-left: 16px; font-size: 13px; color: #666;">
-                                    <li>GitHub Team：月額9ドル（約1,350円）/名（月払い）</li>
-                                    <li>Slack Pro：月額8.75ドル（約1,300円）/名（月払い）</li>
-                                    <li>Notion Plus：月額10ドル（約1,500円）/名（月払い）</li>
+                                    <li>GitHub（無料）：ソースコード管理・ドキュメント管理</li>
+                                    <li>コミュニケーションツール：Slack / Chatwork / LINE WORKS など既存ツールに対応</li>
                                 </ul>
-                                <div class="included-value" style="margin-top: 8px;">➡ 開発ツール費用（約4,200円/名）も含まれているため、お得です</div>
                             </li>
                         </ul>
                     </div>
 
                     <div class="price-note" style="margin-top: 12px;">
-                        ※ツール費用の為替レートは目安です<br>
-                        ※追加メンバーごとにツールアカウントを払い出します
+                        ※Claude Pro費用の為替レートは目安です<br>
+                        ※追加メンバーごとにClaude Proアカウントを払い出します
                     </div>
 
                 </div>
@@ -683,8 +681,7 @@
                     </p>
                     <ul class="service-list">
                         <li><strong>GitHub：</strong>リポジトリのオーナー権限を移譲、またはエクスポートして御社のアカウントへ移行</li>
-                        <li><strong>Slack：</strong>ワークスペースのオーナー権限を移譲、または重要な会話履歴をエクスポート</li>
-                        <li><strong>Notion：</strong>ワークスペースのオーナー権限を移譲、またはページを御社のワークスペースへ移行</li>
+                        <li><strong>コミュニケーションツール：</strong>必要に応じてワークスペースの権限移譲または会話履歴のエクスポート</li>
                     </ul>
                     <p style="margin-top: 15px; color: #666; font-size: 14px;">
                         ※契約終了後も、困った時だけスポットでサポートを受けることも可能です（別途お見積り）
